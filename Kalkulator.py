@@ -7,14 +7,26 @@ def calculate():
     a = int(input("Podaj pierwszy składnik: "))
     b =  int(input("Podaj drugi składnik: "))
     if dzialanie == 1:
-        logging.info(f"Dodaję {a} i {b}")
-        print(f"Wynik to {a + b}")
+        trzeci = input("Czy chcesz dodać trzeci składnik? Y/N: ")
+        if trzeci == "Y":
+            c = int(input("Podaj trzeci składnik: "))
+            logging.info(f"Dodaję {a}, {b} i {c}")
+            print(f"Wynik to {a + b + c}")
+        else:
+            logging.info(f"Dodaję {a} i {b}")
+            print(f"Wynik to {a + b}")
     elif dzialanie == 2:
         logging.info(f"Od {a} odejmuję {b} ")
         print(f"Wynik to {a - b}")
     elif dzialanie == 3:
-        logging.info(f"Mnożę {a} i {b}")
-        print(f"Wynik to {a * b}")
+        trzeci = input("Czy chcesz dodać trzeci składnik? Y/N: ")
+        if trzeci == "Y":
+            c = int(input("Podaj trzeci składnik: "))
+            logging.info(f"Mnożę {a}, {b} i {c}")
+            print(f"Wynik to {a * b * c}")
+        else:
+            logging.info(f"Mnożę {a} i {b}")
+            print(f"Wynik to {a * b}")
     elif dzialanie == 4:
         if b == 0:
             print("Cholero nie dziel przez zero!")
